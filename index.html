@@ -43,9 +43,9 @@
 
         order.addEventListener("click", () => {
             document.getElementByID("error").innerText = '';
-            let name = document.getElementById("user_name").value
-            let email = document.getElementById("user_email").value
-            let phone = document.getElementById("user_phone").value
+            let name = document.getElementById("user_name").value;
+            let email = document.getElementById("user_email").value;
+            let phone = document.getElementById("user_phone").value;
             if(name.length < 2) {
                 document.getElementByID("error").innerText = 'Ошибка в имени';
                 return;
@@ -64,7 +64,7 @@
                 email: email,
                 phone: phone
             }
-            tg.sendData(JSON.stringify(data))
+            tg.sendData(JSON.stringify(data));
 
             tg.close();
         })
